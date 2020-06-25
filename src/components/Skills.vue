@@ -2,10 +2,10 @@
   <div id="skills">
     <h1>Skills</h1>
     <div class="skillDivs">
-      <div class="skillSet">
+      <div class="skillSet" ref="swVisible">
         <h4>Software Development</h4>
         <div id="swLangs">
-          <div class="swLang" v-for="lang in devLangs" :key="lang">
+          <div class="swLang" :class="{'langSeen': swVisible}" v-for="lang in devLangs" :key="lang">
           {{ lang }}
         </div>
         </div>
@@ -14,19 +14,19 @@
         <h4>Software Tools</h4>
         <li v-for="tool in devTools" :key="tool" id="toolSet"> {{ tool }}</li>
       </div>
-      <div class="skillSet" ref="visibleDiv">
+      <div class="skillSet" ref="langVisible">
         <h4>International Languages</h4>
-        <div class="language" :class="{ 'animateOn': visible}">
+        <div class="language" :class="{ 'animateOn': langVisible}">
           <h5>Spanish</h5>
-          <li>Reading</li><span class="bar"><span v-if="visible" id="reading-sp"></span></span>
-          <li>Writing</li><span class="bar"><span v-if="visible" id="writing-sp"></span></span>
-          <li>Speaking</li><span class="bar"><span v-if="visible" id="speaking-sp"></span></span>
+          <li>Reading</li><span class="bar"><span v-if="langVisible" id="reading-sp"></span></span>
+          <li>Writing</li><span class="bar"><span v-if="langVisible" id="writing-sp"></span></span>
+          <li>Speaking</li><span class="bar"><span v-if="langVisible" id="speaking-sp"></span></span>
         </div>
-        <div class="language" :class="{ 'animateOn': visible}">
+        <div class="language" :class="{ 'animateOn': langVisible}">
           <h5>Japanese</h5>
-          <li>Reading</li><span class="bar"><span v-if="visible" id="reading-jp"></span></span>
-          <li>Writing</li><span class="bar"><span v-if="visible" id="writing-jp"></span></span>
-          <li>Speaking</li><span class="bar"><span v-if="visible" id="speaking-jp"></span></span>
+          <li>Reading</li><span class="bar"><span v-if="langVisible" id="reading-jp"></span></span>
+          <li>Writing</li><span class="bar"><span v-if="langVisible" id="writing-jp"></span></span>
+          <li>Speaking</li><span class="bar"><span v-if="langVisible" id="speaking-jp"></span></span>
         </div>
       </div>
 
@@ -40,7 +40,8 @@ export default {
     return {
       devLangs: ['Python', 'Javascript', 'HTML5', 'CSS3', 'C++', 'NodeJS', 'Vue', 'BASH', 'Wolfram'],
       devTools: ['Express', 'Mongoose', 'Git', 'Github', 'NPM', 'Chrome DevTools', 'Boostrap', 'Jest'],
-      visible: false,
+      langVisible: false,
+      swVisible: false,
     }
   },
 
@@ -54,18 +55,22 @@ export default {
 
   methods: {
     onScroll() {
-      let top = this.$refs.visibleDiv.getBoundingClientRect().top;
+      let langTop = this.$refs.langVisible.getBoundingClientRect().top;
+      let swTop = this.$refs.swVisible.getBoundingClientRect().top;
       
-      
-      if(top < 660 && top > -350) {
-        this.visible = true;
-        return;
+      if(langTop < 660 && langTop > -350) {
+        this.langVisible = true;
       }
       else {
-        this.visible = false;
-        return;
+        this.langVisible = false;
       }
-      
+      if(swTop < 660 && swTop > -350) {
+        this.swVisible = true;
+      }
+      else {
+        this.swVisible = false;
+      }
+      return;
     }
   }
 
@@ -75,7 +80,6 @@ export default {
 <style scoped>
   #skills {
     padding: 5%;
-    min-height: 100vh; 
     text-align: left;
     background: rgb(97,130,106);
     color: rgba(255, 255, 255, 0.87);
@@ -104,7 +108,7 @@ export default {
   .skillSet {
     text-align: center;
     padding: 15px;
-    min-width: 260px;
+    min-width: 200px;
     max-width: 300px;
   }
 
@@ -121,7 +125,7 @@ export default {
     justify-content: center;
     height: 80px;
     width: 80px;
-    border: 1px solid rgba(0, 0, 0, 0.315);
+    border: 1px solid rgba(0, 0, 0, 0.0);
     border-radius: 50%;
     margin: 5px;
     padding: 10px;
@@ -129,8 +133,9 @@ export default {
     font-size: 14px;
   }
 
-  .swLang:hover {
-    border: 3px solid rgba(0,0,0,0.315);
+  .langSeen {
+    transition: 1s ease-in-out 0.2s;
+    border: 1px solid rgba(0,0,0,0.315);
   }
 
   #toolSet {
@@ -147,44 +152,41 @@ export default {
   }
 
   .bar {
-    background: #353b48;
+    background: #47474752;
     display: block;
-    height: 5px;
-    border: 1px solid rgba(0,0,0,0.3);
-    border-radius: 3px;
-    box-shadow: 0 0 4px #000000b3;
+    height: 5x;
   }
 
   .bar span {
     height: 5px;
     float: left;
-    background: rgb(174,174,144);
+    background: rgba(184, 184, 144, 0.853);
     border-radius: 2px;
   }
 
   #reading-sp {
     width: 75%;
-    animation: skillBar 2s;
+    animation: skillBar ease 1s;
   }
   #writing-sp {
     width: 60%;
-    animation: skillBar 2s;
+    animation: skillBar ease 1s;
   }
   #speaking-sp {
     width: 35%;
-    animation: skillBar 2s;
+    animation: skillBar ease 1s;
   }
   #reading-jp {
     width: 55%;
-    animation: skillBar 2s;
+    animation: skillBar 1s;
   }
   #writing-jp {
     width: 40%;
-    animation: skillBar 2s;
+    animation: skillBar 1s;
   }
   #speaking-jp {
     width: 25%;
-    animation: skillBar 2s;
+    animation: skillBar 1s;
   }
 
   @keyframes skillBar {

@@ -4,7 +4,7 @@
     <div class="timelineBody">
     <main>
       <p data-date='2015'><strong>Student Manager, Bert's Cafe</strong><br>Lead shifts of up to six employees, including keeping employees on task, fixing errors, and running the employee of the month program. Kept inventory of all baked goods and ordered new stock when needed.</p>
-      <p data-date='2018'><strong>Student Research Assistant, Plasmadynamics and Electric Propulsion Laboratory</strong><br>Assisted in tests of vaccuum chamber by designing and fabricating a waterfall board to reduce systematic error due to wire tension. Reduced the chance of electric arcing by building nylong thimbles to replace standard electrical tape.</p>
+      <p data-date='2018'><strong>Student Research Assistant, Plasmadynamics and Electric Propulsion Laboratory</strong><br>Assisted in tests of vaccuum chamber by designing and fabricating a waterfall board to reduce systematic error due to wire tension. Reduced the chance of electric arcing by building nylon thimbles to replace standard electrical tape.</p>
       <p data-date='2018'><strong>University of Michigan</strong><br>Graudated with a B.S.E in Engineering Physics with a focus of Aerospace Engineering and a Minor in Mathematics.</p>
       <p data-date='2019'><strong>Front Desk Staff, Bridges Rock Gym</strong><br>Ensured proper opening of gym, including facility maintenance, cleaning, and preparation for events. Handled customer service requests including membership agreements, customer complaints, and event coordination. Voted “Most Valuable Desk Staff” of 2019 by managers of the gym.</p>
       <p data-date='2020'><strong>The Odin Project</strong><br>Completed the Full-Stack Javascript Course offered by The Odin Project which included completing over 300 hours of work and 25+ projects.</p>
@@ -18,7 +18,6 @@
 
 //Colors
 $black: #34435E;
-$white: rgb(204, 204, 184);
 
 .timelineBody {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -42,16 +41,16 @@ $white: rgb(204, 204, 184);
 }
 
 main {
-  min-width: 300px;
+  min-width: 200px;
   max-width: 500px;
   margin: auto;
 }
 
 h1 {
   text-align: left;
-  border-bottom: 3px solid $white;
+  border-bottom: 3px solid rgb(50,58,66);
   width: 216px;
-  color: rgb(50,58,66);
+  color: rgba(255, 255, 255, 0.87);
   font-family: 'Titillium Web', sans-serif;
   font-weight: 800;
 }

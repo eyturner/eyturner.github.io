@@ -13,12 +13,12 @@
                             <hr>
                             <div class="card-body">
                                 <p>
-                                    What you're currently looking at! Build with VueJS and Bootstrap, it is a single page
+                                    What you're currently looking at! Built with VueJS and Bootstrap, it is a single page
                                     website featuring a responsive design and animations to create a seamless experience for the user.
                                 </p>
                                 <div class="btnDiv">
                                     <button type="button" class="btn btn-outline-secondary">
-                                        <a href="https://github.com/eyturner/BuzzingBee">Github</a>
+                                        <a href="https://github.com/eyturner/eyturner.github.io">Github</a>
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary">
                                         <a href="#title">Demo</a>
@@ -53,21 +53,21 @@
                     <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card">
                             <div class="card-head">
-                                <img alt="Vue logo" class="rounded-circle img-custome" src="https://cdn2.iconfinder.com/data/icons/bee-farm-filled/64/bee_farm-20-512.png">
-                                <h2>Buzzing Bee</h2>
+                                <img alt="Vue logo" class="rounded-circle img-custome" src="https://cdn2.iconfinder.com/data/icons/data-science-7/512/data-science-lab-18-512.png">
+                                <h2>Maze Algorithm Visualizer</h2>
                             </div>
                             <hr>
                             <div class="card-body">
                                 <p>
-                                    An interactive web game based on The New York Time's Spelling Bee. Written in VanillaJS and 
-                                    using NPM and Webpack for modularity, it challenges users to create words using letters from a hexagonal grid.
+                                    A web app designed to display multiple algorithms for generating mazes. The user can 
+                                    control which algorithm is implemented as well as the speed at which it is implemented.
                                 </p>
                                 <div class="btnDiv">
                                     <button type="button" class="btn btn-outline-secondary">
-                                        <a href="https://github.com/eyturner/BuzzingBee">Github</a>
+                                        <a href="https://github.com/eyturner/MazeAlgorithmVisualizer/">Github</a>
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary">
-                                    <a href="https://eyturner.github.io/BuzzingBee/">Demo</a>
+                                    <a href="https://eyturner.github.io/MazeAlgorithmVisualizer/">Demo</a>
                                     </button>
                                 </div>
                             </div>
@@ -96,18 +96,21 @@
                      <div class="col-md-4 d-flex align-items-stretch">
                         <div class="card">
                             <div class="card-head">
-                                <img alt="Vue logo" class="rounded-circle img-custome" src="https://cdn0.iconfinder.com/data/icons/sports-icons-rounded/110/Soccer-512.png">
-                                <h2>Premier League ELO Ratings </h2>
+                                <img alt="Vue logo" class="rounded-circle img-custome" src="https://cdn2.iconfinder.com/data/icons/bee-farm-filled/64/bee_farm-20-512.png">
+                                <h2>Buzzy Bee</h2>
                             </div>
                             <hr>
                             <div class="card-body">
                                 <p>
-                                    A Python program using BeautifulSoup to scrape the web for the most recent premier league scores.
-                                    It then uses a rating system based on the ELO system from chess to make predictions on future outcomes.
+                                    A web game modeled after NYT's Spelling Bee. Built in VanillaJS it features a 
+                                    responsive page design and utilizes async/await methods to verify words with an online dictionary.
                                 </p>
                                 <div class="btnDiv">
                                     <button type="button" class="btn btn-outline-secondary">
-                                        <a href="https://github.com/eyturner/SoccerRatings">Github</a>
+                                        <a href="https://github.com/eyturner/BuzzingBee">Github</a>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary">
+                                        <a href="https://eyturner.github.io/BuzzingBee/">Demo</a>
                                     </button>
                                 </div>
                             </div>
@@ -172,7 +175,7 @@
 
     h1 {
         text-align: left;
-        border-bottom: 2px solid rgb(50,58,66);
+        border-bottom: 3px solid rgb(50,58,66);
         width: 166px;
         margin-bottom: 5%;
         font-family: 'Titillium Web', sans-serif;

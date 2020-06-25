@@ -27,7 +27,7 @@ export default {
     return {
       contact: {
         email: '',
-        message: ''
+        message: '',
       }
     }
   },

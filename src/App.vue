@@ -1,21 +1,10 @@
 <template>
   <div id="app">
-    <!-- modal for contact -->
-    <section class="">
-      <div class="modal fade bd-example-modal-lg" id="contactModal" tabindex="-1"
-      role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <Contact/> <!-- where we utilized the newly imported component -->
-                </div>
-          </div>
-      </div>
-    </section>
     <Navigation/>
     <Title/>
-    <About/>
-    <Skills/>
+    <About></About>
     <Projects/>
+    <Skills/>
     <Work/>
     <ResumePDF/>
   </div>
@@ -30,7 +19,6 @@ import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
 import Work from './components/Work.vue';
 import ResumePDF from './components/ResumePDF.vue';
-import Contact from './components/Contact.vue';
 
 export default {
   name: 'App',
@@ -42,7 +30,6 @@ export default {
     Projects,
     Work,
     ResumePDF,
-    Contact,
   },
 }
 </script>
